@@ -21,8 +21,10 @@ automatically create the tables.
 lists the dependencies.
 
 ## Requirements
-Set up a virtual environment with Python 2.7
-```$ pip install -r requirements.txt```
+Set up a virtual environment with Python 2.7, then pip install the requirements file:
+```
+$ pip install -r requirements.txt
+```
 
 ## Setup
 To parse the HTML and store in a newly created table, execute the following in command line:
