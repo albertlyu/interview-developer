@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
   # Initialize table information
   table_schema = 'public'
-  table_name = 'battingLeaders'
+  table_name = 'battingleaders'
   column_names = header
 
   # Create table and insert records
