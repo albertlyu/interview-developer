@@ -20,7 +20,7 @@ def create_connection():
 
 def create_table(cursor,table_schema,table_name,column_names):
   """
-  Create table with column names of data type varchar(100) if it 
+  Create table with column names of data type varchar(50) if it 
   doesn't exist, then execute on cursor object.
   """
   create_table = "CREATE TABLE IF NOT EXISTS " + table_schema + "." + table_name + ' ("' + '" varchar(50),"'.join(column_names) + '" varchar(50));'
