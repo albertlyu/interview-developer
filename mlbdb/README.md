@@ -17,26 +17,30 @@ $ createdb mlbdb -U [USERNAME]
 ```
 
 ## Instructions
-1. To parse ```leaderboard.html``` and store the batter leaderboard table's data in a database table, execute the following in command line:
-	```
-	$ python python/create.py
-	```
-2. To create your control table, execute the following. This control table will be used to update columns' data types. Enter your password for [USERNAME] after execution:
-	```
-	$ psql -d mlbdb -U [USERNAME] -a -f sql/control_table.sql
-	```
-3. Next, execute the script to update data types for all columns:
-	```
-	$ python python/update.py
-	```
-4. Let's also import wOBA constants for the past 15 seasons into our database. Create the wOBA constants table like so:
-	```
-	$ psql -d mlbdb -U [USERNAME] -a -f sql/wOBA_constants.sql
-	```
-5. Now that we've updated the data types for the ```battingleaders``` table as well as created a ```woba_constants``` table, we can calculate wOBA for each player. Execute the following SQL script:
-	```
-	$ psql -d mlbdb -U [USERNAME] -a -f sql/calculate_wOBA.sql
-	```
+Step 1: To parse ```leaderboard.html``` and store the batter leaderboard table's data in a database table, execute the following in command line:
+```
+$ python python/create.py
+```
+
+Step 2: To create your control table, execute the following. This control table will be used to update columns' data types. Enter your password for [USERNAME] after execution:
+```
+$ psql -d mlbdb -U [USERNAME] -a -f sql/control_table.sql
+```
+
+Step 3: Next, execute the script to update data types for all columns:
+```
+$ python python/update.py
+```
+
+Step 4: Let's also import wOBA constants for the past 15 seasons into our database. Create the wOBA constants table like so:
+```
+$ psql -d mlbdb -U [USERNAME] -a -f sql/wOBA_constants.sql
+```
+
+Step 5: Now that we've updated the data types for the ```battingleaders``` table as well as created a ```woba_constants``` table, we can calculate wOBA for each player. Execute the following SQL script:
+```
+$ psql -d mlbdb -U [USERNAME] -a -f sql/calculate_wOBA.sql
+```
 
 ## Discussion
 I'd like to discuss why I implemented the above methods the way I did. In Step 1, ```create.py``` starts off with using the methods in ```parse.py``` to store the header row of the HTML table as well as the records in the table. Some cleansing needed to be done before continuing, such as removing the separator column between the 'Team' and 'PlayerId' fields and cleaning up the 'Player' field. 
