@@ -1,8 +1,36 @@
 var App = angular.module('App', []);
- 
+
+// Controller for roster data
 App.controller('RosterCtrl', function($scope, $http) {
   $http.get('roster.json')
-       .then(function(res){
-          $scope.players = res.data;                
-        });
+    .then(function(res) {
+      $scope.players = res.data;
+      $scope.Math = Math;
+    });
+});
+
+// Directive for default player image
+App.directive('errSrc', function() {
+  return {
+    link: function(scope, element, attrs) {
+      element.bind('error', function() {
+        if (attrs.src != attrs.errSrc) {
+          attrs.$set('src', attrs.errSrc);
+        }
+      });
+    }
+  };
+});
+
+// Filter for calculating age based on date of birth
+App.filter('ageFilter', function() {
+  function calculateAge(dateOfBirth) {
+    var birthdate = new Date(dateOfBirth);
+    var ageDifMs = Date.now()-birthdate.getTime();
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear()-1970);
+  }
+  return function(birthdate) {
+    return calculateAge(birthdate);
+  };
 });
