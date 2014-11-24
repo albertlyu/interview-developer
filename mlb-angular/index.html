@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="App" >
+<head>
+  <meta charset="utf-8">
+  <title>Cubs' Roster</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="RosterCtrl">
+  <ul>
+    <li ng-repeat="player in players">
+      {{player.firstname}} {{player.lastname}}
+    </li>
+  </ul>
+</body>
+</html>
