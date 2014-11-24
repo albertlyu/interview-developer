@@ -1,5 +1,2 @@
 /.project
-/__pycache__
-/mlb-react/node_modules
-*.pyc
 .DS_Store
