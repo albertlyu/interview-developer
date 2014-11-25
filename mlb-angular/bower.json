@@ -1,0 +1,10 @@
+{
+  "name": "mlb-angular",
+  "description": "Mini web application for viewing the Cubs MLB team roster",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.3.x",
+    "bootstrap": "3.3.x",
+    "jquery": "2.1.x"
+  }
+}

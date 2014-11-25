@@ -4,12 +4,16 @@
 This project was built with AngularJS, a JavaScript framework maintained by Google.
 
 ## Instructions
-Within the mlb-angular folder, start a simple Python server with one of the following commands depending on your version of Python:
+Install this project's dependencies with the Bower package manager. If you do not have Bower installed, install it globally by executing ```sudo npm install -g bower```, then within the mlb-angular folder, run the following command:
+```
+bower install
+```
+This installs mlb-angular's dependencies, including AngularJS 1.3, Twitter Bootstrap 3.3, and so on. Now start a simple Python server with one of the following commands depending on your version of Python:
 ```
 python -m SimpleHTTPServer # Python 2
 python3 -m http.server # Or Python 3
 ```
-Open ```localhost:8000``` in a browser.
+To view the application, open ```localhost:8000``` in your favorite web browser.
 
 ## To Do
 - [x] Load roster.json via controller
@@ -18,5 +22,6 @@ Open ```localhost:8000``` in a browser.
 - [x] Add orderBy filter on expression predicate
 - [x] Add search bar
 - [x] Create modal to save and view player notes
+- [x] Manage dependencies with Bower
 - [ ] Persist notes data using local storage ([angular-local-storage](https://github.com/grevory/angular-local-storage)?)
 - [ ] Add Wrigley Field panorama as background image
