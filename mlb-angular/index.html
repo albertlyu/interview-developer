@@ -66,15 +66,9 @@
               <td>{{player.mlb_debut | date:'mediumDate'}}</td>
               <td>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    Add new... <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Add new</a>
-                    </li>
-                    <li><a href="#">View notes</a>
-                    </li>
-                  </ul>
+                  <form ng-submit="player.submit()">
+                    <input type="text" ng-model="player.text" name="text" />
+                  </form>
                 </div>
               </td>
             </tr>
