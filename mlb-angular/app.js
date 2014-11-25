@@ -20,6 +20,10 @@ App.controller('RosterCtrl', ['$scope', '$http', 'localStorageService', function
           console.log(player);
           console.log(player.notes);
         };
+        player.reset = function() {
+          player.notes = [];
+          localStorageService.remove(player.player_id_mlbam);
+        };
       });
       console.log($scope.players);
       $scope.Math = Math;
