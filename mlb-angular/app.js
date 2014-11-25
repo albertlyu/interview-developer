@@ -10,17 +10,29 @@ App.controller('RosterCtrl', ['$scope', '$http', function($scope, $http) {
         player.text = '';
         player.submit = function() {
           if (player.text) {
-            player.notes.push(this.text);
+            var dateString = getDateTime();
+            player.notes.push(dateString + ': ' + this.text);
             player.text = '';
           }
           console.log(player);
           console.log(player.notes);
-        }
-      })
+        };
+      });
       console.log($scope.players);
       $scope.Math = Math;
     });
 }]);
+
+// Function for getting datetime string
+function getDateTime() {
+  var today = new Date();
+  var yyyy = today.getFullYear().toString();
+  var mm = (today.getMonth() + 1).toString();
+  var dd = today.getDate().toString();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  return [yyyy,mm,dd].join('-') + ' ' + [h,m].join(':');
+}
 
 // Directive for default player image
 App.directive('errSrc', function() {

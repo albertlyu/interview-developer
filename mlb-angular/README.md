@@ -17,5 +17,6 @@ Open ```localhost:8000``` in a browser.
 - [x] Add mug shots, including default mugshot for C.J. Edwards
 - [x] Add orderBy filter on expression predicate
 - [x] Add search bar
-- [ ] Create save and view player notes feature (Bootstrap modal or popover)
+- [x] Create modal to save and view player notes
+- [ ] Persist notes data using local storage ([angular-local-storage](https://github.com/grevory/angular-local-storage)?)
 - [ ] Add Wrigley Field panorama as background image
