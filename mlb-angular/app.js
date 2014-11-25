@@ -6,6 +6,8 @@ App.controller('RosterCtrl', ['$scope', '$http', function($scope, $http) {
     .then(function(res) {
       $scope.players = res.data;
       $scope.players.forEach(function(player) {
+        player.fullname = player.firstname + ' ' + player.lastname;
+        player.batthrow = player.bats + '/' + player.throws;
         player.notes = [];
         player.text = '';
         player.submit = function() {

@@ -55,9 +55,9 @@
                   <img ng-src="http://mlb.mlb.com/images/players/mugshot/ph_{{player.player_id_mlbam}}.jpg" err-src="images/default-player.png" style="width:50px;" />
                 </div>
               </td>
-              <td>{{player.firstname}} {{player.lastname}}</td>
+              <td>{{player.fullname}}</td>
               <td>{{player.position}}</td>
-              <td>{{player.bats}}/{{player.throws}}</td>
+              <td>{{player.batthrow}}</td>
               <td>{{Math.floor(player.height / 12)}}' {{player.height % 12}}"</td>
               <td>{{player.weight}} lbs</td>
               <td>{{player.dob_dte | date:'mediumDate'}} ({{player.dob_dte | ageFilter}} yrs)</td>
@@ -79,7 +79,7 @@
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                         </button>
-                        <h4 class="modal-title" id="playerNotesLabel">Notes for {{player.firstname}} {{player.lastname}}</h4>
+                        <h4 class="modal-title" id="playerNotesLabel">Notes for {{player.fullname}}</h4>
                       </div>
                       <div class="modal-body">
                         <ul>
