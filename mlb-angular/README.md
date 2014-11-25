@@ -15,6 +15,12 @@ python3 -m http.server # Or Python 3
 ```
 To view the application, open ```localhost:8000``` in your favorite web browser.
 
+## Discussion
+* AngularJS
+* Bower
+* Bootstrap Modals
+* angular-local-storage for HTML5 web storage
+
 ## To Do
 - [x] Load roster.json via controller
 - [x] Convert inches to feet, date of birth to age
@@ -23,5 +29,6 @@ To view the application, open ```localhost:8000``` in your favorite web browser.
 - [x] Add search bar
 - [x] Create modal to save and view player notes
 - [x] Manage dependencies with Bower
-- [ ] Persist notes data using local storage ([angular-local-storage](https://github.com/grevory/angular-local-storage)?)
+- [x] Persist notes data using [angular-local-storage](https://github.com/grevory/angular-local-storage)
+- [ ] Add screenshot of application
 - [ ] Add Wrigley Field panorama as background image

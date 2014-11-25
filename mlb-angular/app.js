@@ -1,20 +1,21 @@
-var App = angular.module('App', []);
+var App = angular.module('App', ['LocalStorageModule']);
 
-// Controller for roster data
-App.controller('RosterCtrl', ['$scope', '$http', function($scope, $http) {
+// Controller for roster data and player notes storage
+App.controller('RosterCtrl', ['$scope', '$http', 'localStorageService', function($scope, $http, localStorageService) {
   $http.get('roster.json')
     .then(function(res) {
       $scope.players = res.data;
       $scope.players.forEach(function(player) {
         player.fullname = player.firstname + ' ' + player.lastname;
         player.batthrow = player.bats + '/' + player.throws;
-        player.notes = [];
+        player.notes = localStorageService.get(player.player_id_mlbam) || [];
         player.text = '';
         player.submit = function() {
           if (player.text) {
             var dateString = new Date().toLocaleString();
             player.notes.push(dateString + ': ' + this.text);
             player.text = '';
+            localStorageService.set(player.player_id_mlbam,player.notes);
           }
           console.log(player);
           console.log(player.notes);
@@ -49,4 +50,10 @@ App.filter('ageFilter', function() {
   return function(birthdate) {
     return calculateAge(birthdate);
   };
+});
+
+// Local storage service provider for player notes
+App.config(function (localStorageServiceProvider) {
+  localStorageServiceProvider
+    .setPrefix('cubsApp');
 });
