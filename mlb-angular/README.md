@@ -11,12 +11,12 @@ Install this project's dependencies with the Bower package manager. If you do no
 ```
 bower install
 ```
-This installs mlb-angular's dependencies, including AngularJS 1.3, Twitter Bootstrap 3.3, and so on. Now start a simple Python server with one of the following commands depending on your version of Python:
+This installs mlb-angular's dependencies, including AngularJS 1.3, Twitter Bootstrap 3.3, and so on. Now install your Node modules, then fire up your Node server:
 ```
-python -m SimpleHTTPServer # Python 2
-python3 -m http.server # Or Python 3
+npm install
+npm start
 ```
-To view the application, open ```localhost:8000``` in your favorite web browser.
+This starts a simple HTTP server from which to serve the application. To view the application, open ```localhost:8000``` in your favorite web browser.
 
 ## Technologies Discussion
 #### AngularJS: Data-binding, ng-repeat, ng-click, and ng-submit

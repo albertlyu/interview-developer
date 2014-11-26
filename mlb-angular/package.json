@@ -1,0 +1,26 @@
+{
+  "name": "mlb-angular",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Mini web application for viewing the Cubs MLB team roster",
+  "main": "server.js",
+  "dependencies": {
+    "bower": "1.3.x",
+    "http-server": "0.6.x",
+    "connect": "3.3.x",
+    "serve-static": "1.7.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albertlyu/interview-developer.git"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
