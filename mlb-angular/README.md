@@ -30,5 +30,5 @@ To view the application, open ```localhost:8000``` in your favorite web browser.
 - [x] Create modal to save and view player notes
 - [x] Manage dependencies with Bower
 - [x] Persist notes data using [angular-local-storage](https://github.com/grevory/angular-local-storage)
+- [x] Add Wrigley Field as background image
 - [ ] Add screenshot of application
-- [ ] Add Wrigley Field panorama as background image
