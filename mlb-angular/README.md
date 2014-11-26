@@ -3,6 +3,9 @@
 ## Overview
 This project was built with AngularJS, a JavaScript framework maintained by Google.
 
+![Screenshot1](/images/screenshot1.png)
+![Screenshot2](/images/screenshot2.png)
+
 ## Instructions
 Install this project's dependencies with the Bower package manager. If you do not have Bower installed, install it globally by executing ```sudo npm install -g bower```, then within the mlb-angular folder, run the following command:
 ```
@@ -31,4 +34,4 @@ To view the application, open ```localhost:8000``` in your favorite web browser.
 - [x] Manage dependencies with Bower
 - [x] Persist notes data using [angular-local-storage](https://github.com/grevory/angular-local-storage)
 - [x] Add Wrigley Field as background image
-- [ ] Add screenshot of application
+- [x] Add screenshot of application
