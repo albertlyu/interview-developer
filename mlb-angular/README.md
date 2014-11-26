@@ -18,6 +18,8 @@ npm start
 ```
 This starts a simple HTTP server from which to serve the application. To view the application, open ```localhost:8000``` in your favorite web browser.
 
+This application has also been [deployed to Heroku](http://cubs.herokuapp.com/) for your convenience.
+
 ## Technologies Discussion
 #### AngularJS: Data-binding, ng-repeat, ng-click, and ng-submit
 AngularJS is a JavaScript framework for dynamic web applications. It extends HTML's syntax beyond a declarative language of static web pages towards dynamic web applications that make use of two-way data-binding (model-to-view, view-to-model). In our application, we make use of data-binding by binding both the model to the view and the view to the model, starting with [roster.json](roster.json) and adding additional properties, such as fullname, batthrows, and notes in order to manipulate the view's table contents.
