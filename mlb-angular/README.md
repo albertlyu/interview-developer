@@ -3,8 +3,8 @@
 ## Overview
 This project was built with AngularJS, a JavaScript framework maintained by Google.
 
-![Screenshot1](mlb-angular/images/screenshot1.png)
-![Screenshot2](mlb-angular/images/screenshot2.png)
+![Screenshot1](images/screenshot1.png)
+![Screenshot2](images/screenshot2.png)
 
 ## Instructions
 Install this project's dependencies with the Bower package manager. If you do not have Bower installed, install it globally by executing ```sudo npm install -g bower```, then within the mlb-angular folder, run the following command:
