@@ -5,7 +5,7 @@ This project was built with Python 2.7.5 and PostgreSQL 9.3.4. If you aren't alr
 
 If you are using Python 2.7.x, pip install the following requirements file:
 ```
-$ pip install -r requirements.txt # Python 2.7.5
+$ pip install -r requirements.txt
 ```
 
 If you are on a Windows machine and are unable to install ```psycopg2``` correctly, you will need to install ```psycopg2``` directly as this is a known issue with installing ```psycopg2``` on Windows. To do so, run the following:
