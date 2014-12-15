@@ -21,7 +21,7 @@ Update ```config.ini``` with your PostgreSQL credentials, particularly a usernam
 
 You will need to create a database called ```mlbdb```. Assuming that you already have PostgreSQL 9.3.4, the ```createdb``` wrapper statement should already be mapped for you. To create your ```mlbdb```, execute the following in command line:
 ```
-$ createdb mlbdb -U [USERNAME]
+$ createdb -U [USERNAME] mlbdb
 ```
 
 ## Instructions
