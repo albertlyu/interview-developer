@@ -8,6 +8,14 @@ If you are using Python 2.x, pip install the following requirements file:
 $ pip install -r requirements.txt # Python 2.7.5
 ```
 
+If you are on a Windows machine and are unable to install ```psycopg2``` with the message 'error: Unable to find vcvarsall.bat,' you will need to install ```psycopg2``` directly as this is a known issue with installing ```psycopg2``` on Windows. To do so, run the following:
+
+```
+$ easy_install http://stickpeople.com/projects/python/win-psycopg/2.5.3/psycopg2-2.5.3.win32-py2.6-pg9.3.4-release.exe
+```
+
+For more details, see the [following link](http://stackoverflow.com/questions/5382801/where-can-i-download-binary-eggs-with-psycopg2-for-windows/5383266#5383266).
+
 ## Configuration
 Update ```config.ini``` with your PostgreSQL credentials, particularly a username with database write access and its password. This config file will be leveraged by scripts later on in this writeup.
 
